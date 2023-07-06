@@ -27,6 +27,9 @@ public class AppDbContext : DbContext
             b.HasKey(x => x.Id).HasName("PK_Authors_Id");
         });
 
+        /*
+         * Many Publisher - to - Many Author
+         */
         modelBuilder.Entity<Publisher>()
             .HasMany(publisher => publisher.Authors)
             .WithMany(author => author.Publishers)
