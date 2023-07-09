@@ -17,13 +17,13 @@ public class AppDbContext : DbContext
     {
         modelBuilder.Entity<Publisher>(b =>
         {
-            b.ToTable("Publisher");
+            b.ToTable("Publishers");
             b.HasKey(x => x.Id).HasName("PK_Publishers_Id");
         });
 
         modelBuilder.Entity<Author>(b =>
         {
-            b.ToTable("Author");
+            b.ToTable("Authors");
             b.HasKey(x => x.Id).HasName("PK_Authors_Id");
         });
 
